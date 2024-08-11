@@ -5,75 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elev8: Empowering India's Athletes</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-     <link rel="stylesheet" href="../dist/output.css">
-     <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
         body {
             font-family: 'Roboto', sans-serif;
         }
         .gradient-bg {
-            background: linear-gradient(135deg, #2e0854 0%, #7b2ff7 100%);
+            background: linear-gradient(135deg, #020016bf 10%, #481c8f 20%, #0d0a2cbf 100%);
+        }
+        .body-bg{
+            background: linear-gradient(135deg,#1928f5, #d11fb3);
         }
         .hover\:highlight:hover {
             text-decoration-line: underline;
             margin-bottom: 3px;
             color: #7b2ff7;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+        }
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
-<body class="bg-purple-900 gradient-bg">
+<body class=" fade-in">
     <!-- Navigation -->
-    <nav class="bg-purple-900 text-white p-4 gradient-bg h-50vh" >
+    <nav class="bg-purple-900 text-white p-4 gradient-bg h-15vh z-20 relative">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
-                <img src="https://picsum.photos/200/300" alt="Elev8 Logo" class="h-8 mr-2">
+                <img src="https://picsum.photos/200/300" alt="Elev8 Logo" class="h-8 mr-4">
                 <span class="text-2xl font-bold text-blue-400">Elev8</span>
             </div>
             <div class="flex items-center space-x-7">
-                <a href="#" class="nav-link text-white">Home</a>
-                <a href="#" class="nav-link text-white">About Us</a>
-                <a href="#" class="nav-link text-white">Our Services</a>
-                <a href="#" class="nav-link text-white">Contact Us</a>
-                <button class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700">Join Elev8</button>
+                <a href="#" class="nav-link text-white text-xl">Home</a>
+                <a href="#" class="nav-link text-white text-xl">About Us</a>
+                <a href="#" class="nav-link text-white text-xl">Our Services</a>
+                <a href="#" class="nav-link text-white text-xl">Contact Us</a>
+                <button class="body-bg text-white text-xl px-4 py-2 rounded-md hover:bg-purple-700">Join Elev8</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-   <header class="relative bg-slate-200 text-white h-80vh">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/backgrounds/iceland.jpg'); opacity: 0.5;"></div>
-    <div class="container mx-auto relative z-10 px-4 text-center py-20">
-        <h1 class="text-5xl font-bold mb-4">Elev8: Empowering India's Athletes</h1>
-        <p class="text-xl mb-8 mx-auto max-w-2xl">
-            Elev8 is revolutionizing the sports ecosystem in India, providing cutting-edge technology and personalized coaching to help young athletes reach their full potential. Join us in shaping the future of Indian sports.
-        </p>
-        <div class="space-x-4">
-            <button class="bg-purple-600 text-white px-6 py-3 rounded-md hover:bg-purple-700">Join Elev8</button>
-            <button class="bg-gray-700 text-white px-6 py-3 rounded-md hover:bg-gray-600">Learn More</button>
+    <div class="relative bg-slate-800 text-white h-180  z-10 overflow-hidden" >
+        <div class="absolute inset-0 bg-cover bg-center background-animate" style="background-image: url('/images/backgrounds/Olympic.avif'); background-size: cover; background-position: center; background-repeat: no-repeat;opacity: 1;"></div>
+        <div class="container mx-auto relative z-10 px-20 text-center content-start py-20" style="opacity: 1;">
+            <h1 class="text-7xl font-bold mb-4 text-start content-center mt-10 text-animate">Elev8: Empowering India's <br> Athletes</h1>
+            <p class="text-xl text-start text-wrap mb-6 text-animate">
+                Elev8 is revolutionizing the sports ecosystem in India, providing cutting-edge technology and personalized coaching to help young athletes reach their full potential. Join us in shaping the future of Indian sports.
+            </p>
+            <div class="space-x-3 text-start text-animate">
+                <button class="text-lg text-black px-6 py-3 rounded-md font-semibold" style="background-color: #d0bef4ff;border-width: 1px;">Join Elev8</button>
+                <button class="bg-gray-700 text-lg text-white px-6 py-3 rounded-md hover:bg-gray-600" style="border-width: 1px;">Learn More</button>
+            </div>
         </div>
     </div>
-</header>
-
-
 
     <!-- Hero Section -->
-    <section class="bg-blue-500 text-white py-20">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-                <h2 class="text-4xl font-bold mb-4">Empowering India's Athletes</h2>
-                <p class="text-xl mb-8">Join us in shaping the future of Indian sports.</p>
-                <a href="#" class="bg-white text-blue-500 py-2 px-6 rounded-full font-bold hover:bg-blue-100">Join Elev8</a>
-            </div>
-            <div class="md:w-1/2">
-                <img src="https://via.placeholder.com/600x400" alt="Athletes in action" class="rounded-lg shadow-lg">
-            </div>
+    <div class="bg-blue-500 body-bg text-white py-20 fade-in">
+        <div class="container mx-auto  justify-center py-0 items-center ">
+            <div class="flex-3">
+                <div class="card rounded-sm bg-transparent" style="background-color:#ccccccbf;position: relative;">
+                    <div style="background-image: url('../images/backgrounds/shadow_sports.jpg'); background-size: cover; background-position: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1;"></div>
+                    <div class="card-body p-10 " >
+                        <h1 class="card-title text-6xl text-black text-center mb-8">Our Mission</h1>
+                        <p class="text-black text-start font-light text-xl mb-8">At Elev8, 
+                            we're committed to revolutionizing the sports scene in India.
+                             We passionately believe that every young athlete deserves access to 
+                            top-tier coaching, cutting-edge technology, and tailor-made training programs.
+                        </p>
+                        <p class="text-black text-start font-light text-xl mb-8">
+                            By combining cutting-edge sports technology with data-driven insights, 
+                            we're empowering athletes, coaches, schools, and sports facilities to achieve excellence. 
+                            Our goal is to nurture India's sporting talent and elevate the nation's presence on the global stage, including the Olympics.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="flex flex-col items-start">
+                                <i class="fa-solid fa-trophy grid text-purple-600 text-5xl mb-4"></i>
+                                <div>
+                                    <h3 class="text-2xl font-light mb-2">Excellence</h3>
+                                    <p>Striving for peak performance in every aspect of sports</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <i class="fas fa-lightbulb text-purple-600 text-5xl mb-4"></i>
+                                <div>
+                                    <h3 class="text-2xl font-light mb-2">Innovation</h3>
+                                    <p>Leveraging cutting-edge technology to revolutionize training</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <i class="fas fa-users text-purple-600 text-5xl mb-4"></i>
+                                <div>
+                                    <h3 class="text-2xl font-light mb-2">Community</h3>
+                                    <p>Building a supportive ecosystem for all stakeholders</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <i class="fas fa-chart-line text-purple-600 text-5xl mb-4"></i>
+                                <div>
+                                    <h3 class="text-2xl font-light mb-2">Growth</h3>
+                                    <p>Fostering continuous improvement and development</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>     
         </div>
-    </section>
+    </div>
+    
 
     <!-- Our Mission -->
-    <section class="py-16">
+    <section class="py-16 fade-in">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-8">Our Mission</h2>
             <div class="flex flex-col md:flex-row items-center">
@@ -90,7 +143,7 @@
     </section>
 
     <!-- Features -->
-    <section class="bg-gray-200 py-16">
+    <section class="bg-gray-200 py-16 fade-in">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">What We Offer</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -119,7 +172,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="bg-blue-600 text-white py-16">
+    <section class="bg-blue-600 text-white py-16 fade-in">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Join the Elev8 Revolution</h2>
             <p class="text-xl mb-8">Be part of the sports revolution in India.</p>
@@ -133,5 +186,7 @@
             <p>&copy; 2024 Elev8. All rights reserved.</p>
         </div>
     </footer>
+
+  <script src="../js/custome.js"></script>
 </body>
 </html>

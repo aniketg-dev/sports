@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 
 .nav-link {
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .nav-link::after {
     content: '';
@@ -12,7 +14,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 4px;
+    border-radius: 5px;
+    background: linear-gradient(135deg,#1928f5, #d11fb3);
     background-color: #fff;
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -23,4 +27,166 @@
 .nav-link.active::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@keyframes backgroundZoomIn {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+@keyframes textZoomOut {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.background-animate {
+    animation: backgroundZoomIn 2s ease-out forwards;
+}
+
+.text-animate {
+    animation: textZoomOut 2s ease-out forwards;
+}
+
+/* Card Container */
+.card {
+    max-width: 100%; /* Make the card responsive */
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-bottom: 1.5rem; /* Add margin to the bottom for spacing */
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Card Body */
+.card-body {
+    padding: 50px;
+}
+
+/* Card Title */
+.card-title {
+    font-weight: 100;
+}
+
+/* Card Text */
+.card-text {
+    color: #4a5568; /* Tailwind's 'text-gray-700' color */
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Button Container */
+.card-buttons {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+/* Button */
+.card-button {
+    display: inline-block;
+    background-color: #4299e1; /* Tailwind's 'bg-blue-500' color */
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.card-button:hover {
+    background-color: #2b6cb0; /* Tailwind's 'bg-blue-700' color */
+}
+
+.card-button-secondary {
+    background-color: #4a5568; /* Tailwind's 'bg-gray-700' color */
+    margin-top: 0.5rem;
+}
+
+.card-button-secondary:hover {
+    background-color: #2d3748; /* Tailwind's 'hover:bg-gray-600' color */
+}
+
+/* Responsive Media Queries */
+@media (min-width: 640px) {
+    .card {
+        max-width: 100%; 
+    }
+
+    .card-buttons {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        padding-top: 1.5rem;
+    }
+
+    .card-button,
+    .card-button-secondary {
+        width: auto;
+        margin-right: 1rem;
+        margin-top: 0;
+    }
+
+    .card-button-secondary {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 100%; 
+    }
+
+    .card-buttons {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        padding-top: 1.5rem;
+    }
+
+    .card-button,
+    .card-button-secondary {
+        width: auto;
+        margin-right: 1rem;
+        margin-top: 0;
+    }
+
+    .card-button-secondary {
+        margin-left: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card {
+        max-width: 100%; /* Cards take a third of the width on large screens */
+        margin-right: 1.5%;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .card {
+        max-width: 100%; /* Cards take a third of the width on large screens */
+        margin-right: 1.5%;
+    }
 }
