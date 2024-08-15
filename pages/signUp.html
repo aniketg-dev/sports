@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elev8: Empowering India's Athletes</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #020016bf 10%, #481c8f 20%, #0d0a2cbf 100%);
+        }
+        .body-bg{
+            background: radial-gradient(circle, rgba(148,63,251,1) 0%, rgba(5,31,115,1) 100%);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.3s ease-in-out, transform 1.3s ease-in-out;
+        }
+        .fade-in-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="body-bg  justify-center ">    
+    <section class="relative body-bg py-15 px-10 fade-in">
+        <div class="container mx-auto bg-transparent mt-10" style="width: 1000px;">
+            <div class="w-full items-center bg-white rounded-lg shadow-lg">
+                <div class="p-10 justify-center">
+                    <h2 class="text-4xl text-center font-bold mb-5">Join the Elev8 Revolution</h2>
+                    <form id="myForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 -mx-4 mb-5">
+                            <!-- Name Input -->
+                            <div class="px-4 mb-4 md:mb-0">
+                                <label for="name" class="block text-lg font-medium mb-2">Name</label>
+                                <input id="name" name="name" type="text" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Name" required>
+                            </div>
+            
+                            <!-- Email Input -->
+                            <div class="px-4">
+                                <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                                <input id="email" name="email" type="email" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Email" required>
+                            </div>
+            
+                            <!-- Mobile Number Section -->
+                            <div class="grid grid-cols-6 gap-4 px-4 mb-4 md:mb-0">
+                                <div class="col-span-6 mb-2">
+                                    <label for="mobile" class="block text-lg font-medium">Phone Number</label>
+                                </div>
+                                <!-- Country Code Select -->
+                                <div class="col-span mr-2">
+                                    <select id="countryCode" name="countryCode" class=" border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
+                                        <option value="+1">+1 (USA)</option>
+                                        <option value="+44">+44 (UK)</option>
+                                        <option value="+91">+91 (India)</option>
+                                        <option value="+61">+61 (Australia)</option>
+                                        <!-- Add more country codes as needed -->
+                                    </select>
+                                </div>
+                                <!-- Mobile Number Input -->
+                                <div class="col-span-5">
+                                    <input id="mobile" name="mobile" type="tel" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Mobile Number" required>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Submit Button -->
+                        <div class="flex justify-center space-x-4">
+                            <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    <script src="../js/custome.js"></script>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            // event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(event.target);
+            console.log("formdata",formData);
+
+            fetch('http://localhost:3000/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log(result); // Show a message based on server response
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+ </body>
+ 
+</html>

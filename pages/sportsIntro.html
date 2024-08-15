@@ -38,7 +38,7 @@
 </head>
 <body class=" fade-in">
     <!-- Navigation -->
-    <nav class="bg-purple-900 text-white p-4 gradient-bg h-15vh z-20 relative">
+    <nav class="bg-purple-900 text-white p-4 gradient-bg h-15vh  z-60 relative">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <img src="https://picsum.photos/200/300" alt="Elev8 Logo" class="h-8 mr-4">
@@ -49,13 +49,13 @@
                 <a href="#" class="nav-link text-white text-xl">About Us</a>
                 <a href="#" class="nav-link text-white text-xl">Our Services</a>
                 <a href="#" class="nav-link text-white text-xl">Contact Us</a>
-                <button class="body-bg text-white text-xl px-4 py-2 rounded-md hover:bg-purple-700">Join Elev8</button>
+                <a href="./signUp.html" class="body-bg text-white text-xl px-4 py-2 rounded-md hover:bg-purple-700">Join Elev8</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="relative bg-slate-800 text-white h-180  z-10 overflow-hidden" >
+    <div class="relative bg-slate-400 text-white h-180  z-10 overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center background-animate" style="background-image: url('/images/backgrounds/Olympic.avif'); background-size: cover; background-position: center; background-repeat: no-repeat;opacity: 1;"></div>
         <div class="container mx-auto relative z-10 px-20 text-center content-start py-20" style="opacity: 1;">
             <h1 class="text-7xl font-bold mb-4 text-start content-center mt-10 text-animate">Elev8: Empowering India's <br> Athletes</h1>
@@ -63,8 +63,8 @@
                 Elev8 is revolutionizing the sports ecosystem in India, providing cutting-edge technology and personalized coaching to help young athletes reach their full potential. Join us in shaping the future of Indian sports.
             </p>
             <div class="space-x-3 text-start text-animate">
-                <button class="text-lg text-black px-6 py-3 rounded-md font-semibold" style="background-color: #d0bef4ff;border-width: 1px;">Join Elev8</button>
-                <button class="bg-gray-700 text-lg text-white px-6 py-3 rounded-md hover:bg-gray-600" style="border-width: 1px;">Learn More</button>
+                <a href="./signUp.html" class="text-lg text-black px-6 py-3 rounded-md font-semibold" style="background-color: #d0bef4ff;border-width: 1px;">Join Elev8</a>
+                <button class="bg-gray-700 text-violet-200 text-lg font-semibold px-6 py-3 rounded-md hover:bg-gray-600" style="border-width: 1px;">Learn More</button>
             </div>
         </div>
     </div>
@@ -90,28 +90,28 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="flex flex-col items-start">
                                 <i class="fa-solid fa-trophy grid text-purple-600 text-5xl mb-4"></i>
-                                <div>
-                                    <h3 class="text-2xl font-light mb-2">Excellence</h3>
+                                <div class="text-black">
+                                    <h3 class="text-2xl font-light mb-2 ">Excellence</h3>
                                     <p>Striving for peak performance in every aspect of sports</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-start">
                                 <i class="fas fa-lightbulb text-purple-600 text-5xl mb-4"></i>
-                                <div>
+                                <div class="text-black">
                                     <h3 class="text-2xl font-light mb-2">Innovation</h3>
                                     <p>Leveraging cutting-edge technology to revolutionize training</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-start">
                                 <i class="fas fa-users text-purple-600 text-5xl mb-4"></i>
-                                <div>
+                                <div class="text-black">
                                     <h3 class="text-2xl font-light mb-2">Community</h3>
                                     <p>Building a supportive ecosystem for all stakeholders</p>
                                 </div>
                             </div>
                             <div class="flex flex-col items-start">
                                 <i class="fas fa-chart-line text-purple-600 text-5xl mb-4"></i>
-                                <div>
+                                <div class="text-black">
                                     <h3 class="text-2xl font-light mb-2">Growth</h3>
                                     <p>Fostering continuous improvement and development</p>
                                 </div>
@@ -126,24 +126,77 @@
     
 
     <!-- Our Mission -->
-    <section class="py-16 fade-in">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-8">Our Mission</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img src="https://via.placeholder.com/500x300" alt="Mission illustration" class="rounded-lg shadow-lg">
+    <div class="relative  bg-slate-500  py-20 z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/backgrounds/bg1.avif'); background-repeat: no-repeat;opacity: 1.4;"></div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="container mx-auto text-white">
+            <h1 class="relative text-6xl font-light  text-center mb-8">Personalized Coaching</h1>
+            <p class="text-xl mb-20 relative">
+                At Elev8, we tailor training programs to each athlete's unique needs and goals. Our AI-powered platform analyzes performance data to create a customized regimen, while expert coaches provide guidance and real-time feedback for continuous improvement.
+            </p>
+            <div class="relative space-y-12">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 relative">
+                        <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative">
+                            1
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full  bg-violet-800" style="height: 2px;"></div>
+                        </div>
+                        </div>
+                    <div class="pl-8">
+                        <h3 class="text-2xl font-semibold">Initial Assessment</h3>
+                        <p>Comprehensive evaluation of skills, physical condition, and objectives</p>
+                    </div>
                 </div>
-                <div class="md:w-1/2 md:pl-8">
-                    <p class="text-lg">
-                        At Elev8, we're committed to revolutionizing the sports scene in India. We passionately believe that every young athlete deserves access to top-tier coaching, cutting-edge technology, and tailor-made training programs.
-                    </p>
+    
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 relative mr-4">
+                        <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
+                            2
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="pl-8">
+                        <h3 class="text-2xl font-semibold">Custom Plan Creation</h3>
+                        <p>AI-driven development of a personalized training program</p>
+                    </div>
+                </div>
+    
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 relative">
+                        <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
+                            3
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
+                        </div>
+                         </div>
+                    <div class="pl-8">
+                        <h3 class="text-2xl font-semibold">Ongoing Coaching</h3>
+                        <p>Regular sessions with expert coaches for skill refinement and strategy</p>
+                    </div>
+                </div>
+    
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0 relative">
+                        <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
+                            4
+                            <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="absolute top-10 bottom-5 left-1/6 transform -translate-x-1/2 h-full w-1 bg-violet-800" style="width:2px;" ></div>
+                    <div class="pl-8">
+                        <h3 class="text-2xl font-semibold">Progress Tracking</h3>
+                        <p>Continuous monitoring and analysis to adapt the training plan</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+    
     <!-- Features -->
-    <section class="bg-gray-200 py-16 fade-in">
+    <!-- <section class="bg-gray-200 py-16 fade-in">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12">What We Offer</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -169,16 +222,41 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
+    <!-- Sign Up -->
+    <section class="relative bg-gray-200 py-30 mr-20 px-10 fade-in">
+        <div class="container mx-auto">
+            <div class="flex items-center bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="w-1/2">
+                    <img src="../images/backgrounds/coach.avif" alt="Coach Image" class="h-90vh w-70 object-fit">
+                </div>
+                <div class="w-1/2 p-10">
+                    <h2 class="text-4xl font-bold mb-5">Join the Elev8 Revolution</h2>
+                    <p class="text-lg mb-5">
+                        Be part of the sports revolution in India. Whether you're an athlete, coach, or sports professional, Elev8 offers cutting-edge technology, personalized training, and a network to elevate Indian athletics.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
+                            Sign Up Now
+                        </button>
+                        <button class="bg-gray-200 text-black px-6 py-3 rounded-lg hover:bg-gray-300">
+                            Request a Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Call to Action -->
-    <section class="bg-blue-600 text-white py-16 fade-in">
+    <!-- <section class="bg-blue-600 text-white py-16 hidden">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">Join the Elev8 Revolution</h2>
             <p class="text-xl mb-8">Be part of the sports revolution in India.</p>
-            <a href="#" class="bg-white text-blue-600 py-2 px-6 rounded-full font-bold hover:bg-blue-100">Sign Up Now</a>
+            <a href="#" class="bg-white text-blue-600 py-2 px-6 rounded-sm font-bold hover:bg-blue-100">Sign Up Now</a>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
