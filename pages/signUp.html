@@ -37,31 +37,31 @@
 </head>
 <body class="body-bg  justify-center ">    
     <section class="relative body-bg py-15 px-10 fade-in">
-        <div class="container mx-auto bg-transparent mt-10" style="width: 1000px;">
-            <div class="w-full items-center bg-white rounded-lg shadow-lg">
-                <div class="p-10 justify-center">
+        <div class="container mx-auto bg-transparent mt-10 mb-5 rounded-lg" style="width: 900px;border-width: 1px;">
+            <div class="w-full items-center bg-transparent text-white rounded-lg shadow-lg">
+                <div class="p-10 justify-center ">
                     <h2 class="text-4xl text-center font-bold mb-5">Join the Elev8 Revolution</h2>
                     <form id="myForm">
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 -mx-4 mb-5">
                             <!-- Name Input -->
-                            <div class="px-4 mb-4 md:mb-0">
+                            <div class=" px-4 mb-4 md:mb-3">
                                 <label for="name" class="block text-lg font-medium mb-2">Name</label>
-                                <input id="name" name="name" type="text" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Name" required>
+                                <input id="name" name="name" type="text" class="w-full border text-black border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Name" required>
                             </div>
             
                             <!-- Email Input -->
-                            <div class="px-4">
+                            <div class="px-4  mb-4 md:mb-3">
                                 <label for="email" class="block text-lg font-medium mb-2">Email</label>
-                                <input id="email" name="email" type="email" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Email" required>
+                                <input id="email" name="email" type="email" class="w-full border text-black border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Email" required>
                             </div>
             
                             <!-- Mobile Number Section -->
-                            <div class="grid grid-cols-6 gap-4 px-4 mb-4 md:mb-0">
-                                <div class="col-span-6 mb-2">
+                            <div class="grid grid-cols-6 gap-4 px-4 mb-4 md:mb-3">
+                                <div class="col-span-6 mb-2 md:mb-3">
                                     <label for="mobile" class="block text-lg font-medium">Phone Number</label>
                                 </div>
                                 <!-- Country Code Select -->
-                                <div class="col-span mr-2">
+                                <div class="col-span mr-2 text-black">
                                     <select id="countryCode" name="countryCode" class=" border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
                                         <option value="+1">+1 (USA)</option>
                                         <option value="+44">+44 (UK)</option>
@@ -72,13 +72,64 @@
                                 </div>
                                 <!-- Mobile Number Input -->
                                 <div class="col-span-5">
-                                    <input id="mobile" name="mobile" type="tel" class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Mobile Number" required>
+                                    <input id="mobile" name="mobile" type="tel" class="w-full text-black border border-gray-300 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Your Mobile Number" required>
                                 </div>
                             </div>
+
+                            <div class="px-4  mb-4 md:mb-3">
+                                <label for="occupation" class="block text-lg font-medium mb-2">Occupation</label>
+                                <select name="occupation" id="occupation" class="border border-gray-300 w-full px-4 py-2 bg-white text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" 
+                                 placeholder="Your Occupation" required>
+                                <option value="" disabled selected class="text-gray-300">Select occupation</option>
+                                <option value="Athlete">Athlete</option>
+                                <option value="Coach">Coach</option>
+                                <option value="Sports Enthusiast">Sports Enthusiast</option>
+                                <option value="Fitness Professional">Fitness Professional</option>
+                                <option value="Others">Others</option>
+                            </select>
+                               
+                            </div>
+
+                            <div class="px-4  mb-4 md:mb-3 ">
+                                <label for="reference" class="block text-lg font-medium mb-2">How did you hear about Elev8?</label>
+                                <select name="reference" id="reference" 
+                                class="border w-full border-gray-300 bg-white text-black px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+                                placeholder="Your reference" required>
+                                <option value="" disabled selected class="text-gray-300">Select reference</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Word Of Mouth">Word Of Mouth</option>
+                                    <option value="Online Advertisement">Online Advertisement</option>
+                                    <option value="Event Sponsorship">Event Sponsorship</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                               
+                            </div>
+
+                            <div class="px-4 mb-4 md:mb-3">
+                                    <p class="mt-1 text-sm leading-6 text-gray-600">Are you intrested in receving updates and promotions from Elev8?</p>
+                                    <div class="flex mt-6 gap-8">
+                                      <div class="flex items-center gap-3">
+                                        <input id="Yes" name="notifications" type="radio" class="h-4 w-4 border-gray-300 mr-2 text-purple-600 focus:ring-purple-600">
+                                        <label for="Yes" class="block text-sm font-medium leading-6 text-gray-900 mr-5">Yes</label>
+                                      </div>
+                                      <div class="flex items-center gap-3">
+                                        <input id="No" name="notifications" type="radio" class="h-4 w-4 border-gray-300 mr-2 text-purple-600 focus:ring-purple-600 ml-3">
+                                        <label for="No" class="block text-sm font-medium leading-6 text-gray-900">No</label>
+                                      </div>
+                                   </div>
+                            </div>
+
+                            
+                            
                         </div>
-            
+                        <div class="col-span-full mb-4">
+                            <label for="about" class="block text-sm font-medium leading-6 text-purple-900 mb-4">Any addtion comments or questions for us?</label>
+                            <!-- <div class="mt-4"> -->
+                              <textarea id="about" name="about" rows="3" class="w-full border border-gray-300 px-4 py-2 rounded-lg text-black shadow-sm ring-1 ring-inset ring-purple-300 placeholder:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 sm:text-sm sm:leading-6" placeholder="Write comments here..."></textarea>
+                            <!-- </div> -->
+                          </div>
                         <!-- Submit Button -->
-                        <div class="flex justify-center space-x-4">
+                        <div class="flex justify-center space-x-4 mb-0">
                             <button type="submit" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
                                 Sign Up
                             </button>
@@ -94,25 +145,32 @@
     <script src="../js/custome.js"></script>
 
     <script>
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            // event.preventDefault(); // Prevent default form submission
+       document.getElementById('myForm').addEventListener('submit', function(event) {
+       event.preventDefault(); // Prevent default form submission
 
-            const formData = new FormData(event.target);
-            console.log("formdata",formData);
+    const formData = new FormData(event.target);
+    // console.log("formData",formData);
 
-            fetch('http://localhost:3000/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(result => {
-                console.log(result); // Show a message based on server response
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
+    // Debug: Log FormData entries
+    // for (let [key, value] of formData.entries()) {
+    //     console.log(`${key}: ${value}`);
+    // }
+
+    fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log(result); // Handle the server response
+        window.location.href = 'pages/sportsIntro.html'
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
     </script>
  </body>
  
-</html>
+</html>`
