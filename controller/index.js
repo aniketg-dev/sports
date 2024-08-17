@@ -17,7 +17,7 @@ app.use(upload.none());
 // Route to handle form submission
 app.post('/submit', async (req, res) => {
     console.log('Route hit');
-    const { name, email } = req.body;
+    const { name, email, countryCode, mobile, occupation, reference , notifications, about } = req.body;
 
     console.log("req.body",req.body);
 
@@ -36,11 +36,11 @@ app.post('/submit', async (req, res) => {
         worksheet = workbook.addWorksheet('Submissions');
         
         // Add headers to the first row
-        worksheet.addRow(['Name', 'Email']);
+        worksheet.addRow(['Name', 'Email', "Mobile No.", 'Occupation', 'Reference' , "Notification", "About" ]);
     }
-
+    const number = countryCode +''+ mobile;
     // Add a new row with the form data
-    worksheet.addRow([name, email]);
+    worksheet.addRow([name, email,number, occupation, reference, notifications, about ]);
 
     // Save the Excel file
     await workbook.xlsx.writeFile(excelFilePath);
