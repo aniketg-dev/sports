@@ -2,6 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const ExcelJS = require('exceljs');
 const fs = require('fs');
+const cors = require('cors')
 
 const app = express();
 const upload = multer();
@@ -13,7 +14,7 @@ const excelFilePath = '/root/Documents/Aniket_Personal/sports/excelSheet/custome
 app.use(express.urlencoded({ extended: true ,}));
 app.use(express.json());
 app.use(upload.none());
-
+app.use(cors())
 // Route to handle form submission
 app.post('/submit', async (req, res) => {
     console.log('Route hit');
@@ -55,7 +56,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 2500;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

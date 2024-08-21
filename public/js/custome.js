@@ -13,7 +13,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in').forEach(section => {
         observer.observe(section);
     });
-
-    
-
 });

@@ -101,8 +101,10 @@
     "yaml": "^2.5.0"
   },
   "scripts": {
-    "build": "npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch"
-  },
+  "build": "npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch",
+  "dev": "nodemon index.js",
+  "start": "node index.js"
+   },
   "keywords": [],
   "author": "",
   "license": "ISC",
