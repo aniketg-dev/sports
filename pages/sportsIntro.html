@@ -37,9 +37,38 @@
         .card-bg{
             background:linear-gradient(95deg, rgba(2,12,47,1) 6%, rgba(120,19,116,1) 45%, rgba(8,45,154,1) 85%, rgba(7,36,88,1) 97%);
         }
+        th{
+            /* padding-top: 0.7rem;
+            padding-bottom: 0.7rem; */
+            height: 3.2rem;
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+            text-align: left;
+            white-space: inherit;
+        }
+
+        td{
+            /* padding-top: 0.9rem;
+            padding-bottom: 0.9rem; */
+            height: 3.2rem;
+            padding-left: 0.9rem;
+            padding-right: 0.9rem;
+            text-align: left;
+            white-space: inherit;
+            font-weight: 200;
+        }
+        .underline-custom::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%; /* Control the width of the underline */
+            height: 2px; /* Control the thickness of the underline */
+            background-color: currentColor;
+        }
     </style>
 </head>
-<body class="card-bg fade-in">
+<body class="card-bg ">
     <!-- Navigation -->
     <nav class="bg-purple-900 text-white p-4 gradient-bg h-15vh  z-60 relative">
         <div class="container mx-auto flex justify-between items-center">
@@ -130,7 +159,7 @@
 
     <!-- Our Mission -->
     <div class="relative  bg-slate-500 py-20 z-10 overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/images/backgrounds/bg1.avif'); background-repeat: no-repeat;opacity: 1.4;"></div>
+        <div class="absolute inset-0 bg-cover bg-center " style="background-image: url('/images/backgrounds/bg1.avif'); background-repeat: no-repeat;opacity: 1.4;"></div>
         <div class="absolute inset-0 bg-black opacity-70"></div>
         <div class="container mx-auto text-white p-10 py-0">
             <h1 class="relative text-6xl font-light  text-center mb-8">Personalized Coaching</h1>
@@ -140,13 +169,13 @@
             <div class="relative space-y-12">
                 <!-- Step 1 -->
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 relative mr-4">
+                    <div class="flex-shrink-0 relative  mr-4">
                         <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative">
                             1
                             <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full  bg-violet-800" style="height: 2px;"></div>
                         </div>
                         </div>
-                    <div class="pl-8">
+                    <div class="pl-8 fade-in">
                         <h3 class="text-2xl font-semibold">Initial Assessment</h3>
                         <p>Comprehensive evaluation of skills, physical condition, and objectives</p>
                     </div>
@@ -154,13 +183,13 @@
     
                 <!-- Step 2 -->
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 relative mr-4">
+                    <div class="flex-shrink-0 relative  mr-4">
                         <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
                             2
                             <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
                         </div>
                     </div>
-                    <div class="pl-8">
+                    <div class="pl-8 fade-in">
                         <h3 class="text-2xl font-semibold">Custom Plan Creation</h3>
                         <p>AI-driven development of a personalized training program</p>
                     </div>
@@ -168,13 +197,13 @@
     
                 <!-- Step 3 -->
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 relative mr-4">
+                    <div class="flex-shrink-0 relative  mr-4">
                         <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
                             3
                             <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
                         </div>
                          </div>
-                    <div class="pl-8">
+                    <div class="pl-8 fade-in">
                         <h3 class="text-2xl font-semibold">Ongoing Coaching</h3>
                         <p>Regular sessions with expert coaches for skill refinement and strategy</p>
                     </div>
@@ -182,13 +211,13 @@
     
                 <!-- Step 4 -->
                 <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0 relative mr-4">
+                    <div class="flex-shrink-0 relative  mr-4">
                         <div class="bg-violet-800 text-white rounded-sm h-10 w-10 flex items-center justify-center text-2xl relative z-10">
                             4
                             <div class="absolute left-full top-1/2 transform -translate-y-1/2 w-full h-1 bg-violet-800" style="height: 2px;"></div>
                         </div>
                     </div>
-                    <div class="absolute top-10 bottom-5 left-1/6 transform -translate-x-1/2 h-full w-1 bg-violet-800" style="width:2px;" ></div>
+                    <div class="absolute top-10 botto fade-inm-5 left-1/6 transform -translate-x-1/2 h-full w-1 bg-violet-800" style="width:2px;" ></div>
                     <div class="pl-8">
                         <h3 class="text-2xl font-semibold">Progress Tracking</h3>
                         <p>Continuous monitoring and analysis to adapt the training plan</p>
@@ -240,11 +269,11 @@
     </div>
 
     <!-- Injury Prevention and management -->
-    <div class="bg-slate-400 relative text-black fade-in" style="padding-top: 30px; background-color: rgba(108, 122, 137, 0.7);">
-        <div class="container mx-auto justify-center py-0 p-10 mb-8 items-center ">
+    <div class="bg-slate-400 relative py-20 z-10 text-black fade-in" style="background-color: rgba(108, 122, 137, 0.7);">
+        <div class="container mx-auto justify-center  mb-8 items-center ">
             <!-- <div class="rounded-sm text-black bg-transparent card-bg relative" style="border-width: 1px;"> -->
                 <div class=" justify-center align-middle">
-                    <h1 class="card-title text-6xl text-center mb-8 mt-8">Injury Prevention and Management</h1>
+                    <h1 class="card-title text-6xl text-center mb-8">Injury Prevention and Management</h1>
                     <div class="flex justify-center align-center gap-6">          
                         
                         <!-- Card 1: Smart Matchmaking -->
@@ -279,6 +308,149 @@
             <!-- </div> -->
         </div>
     </div>
+
+    <!-- training AI driven -->
+    <div class=" relative card-bg text-white  fade-in">
+        <div class="container mx-auto justify-center py-10 p-10 items-center">
+            <div class="card rounded-sm  bg-slate-400 relative " >
+                <div class="p-10 justify-center align-middle bg-slate-400 " style="background-image: url('../images/backgrounds/bg1.avif');object-fit: cover;">
+                    <h2 class="card-title text-6xl text-center mb-8">Player Branding & Career Development</h2>
+                    <div class="flex justify-center align-center gap-4">          
+                        <!-- Card 1: Smart Matchmaking -->
+                        <div class="w-1/2 p-4">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Elevate Your Personal Brand</h3>
+                                <p class="text-start">Craft a compelling brand that attracts sponsors and unlocks new opportunities.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Career Planning -->
+                        <div class="w-1/2 p-4">
+                                <h3 class="text-start text-xl mb-2">Media Mastery</h3>
+                                <p class="text-start">Develop the skills to navigate high-profile events with confidence and poise.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center align-center gap-4"> 
+
+                        <div class="w-1/2 p-4">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Connect with Sponsors</h3>
+                                <p class="text-start">Identify the right partners and negotiate lucrative endorsement deals.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="w-1/2 p-4">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Secure Your Future</h3>
+                                <p class="text-start">Receive comprehensive personal finance training for life after sports.</p>
+                            </div>
+                        </div> 
+                        
+                        
+                    </div>
+                        
+                        <!-- Card 3: Performance Analytics -->
+                        
+    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+     <!-- Injury Prevention and management -->
+     <div class="bg-slate-200 relative py-20 px-20 z-10 text-black fade-in" style="background-color: rgba(108, 122, 137, 0.7);">
+        <div class="container mx-auto justify-center  mb-8 items-center ">
+            <!-- <div class="rounded-sm text-black bg-transparent card-bg relative" style="border-width: 1px;"> -->
+                <div class=" justify-center align-middle">
+                    <h1 class="card-title text-6xl text-center mb-8">State-of-the-Art Sports Facilities</h1>
+
+                    <h2 class="text-center">Elev8 provides athletes access to cutting-edge training centers with the latest technology and equipment to help them excel.</h2>
+                    <div class="flex justify-center align-center gap-6">          
+                        
+                        <!-- Card 1: Smart Matchmaking -->
+                        <div class="w-1/3 p-4">
+                            <img class="object-cover h-64 w-full mb-4 rounded-lg overflow-hidden shadow-lg" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1000/height:1000/https://cdn.gamma.app/vl4r9mk5ekuj7bh/536a0764b793405bb52c42af9b120901/original/57a8c8c15c587e3973f8a0776fcd9a0b.jpg" alt="Smart Matchmaking" style="height:250px; width: 100%;">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Smart Matchmaking</h3>
+                                <p class="text-start">Our AI-powered system analyzes an athlete's profile, including strengths, weaknesses, learning style, and coaching preferences, to pair them with the optimal mentors and training programs.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: Career Planning -->
+                        <div class="w-1/3 p-4">
+                            <img class="object-cover h-64 w-full mb-4 rounded-lg shadow-lg" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1000/height:1000/https://cdn.gamma.app/vl4r9mk5ekuj7bh/0cdb9878fdc64783b8b084004d4708cd/original/MultiUseSportsFacilities0816.jpg" alt="Career Planning" style="height:250px; width: 100%;">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Career Planning</h3>
+                                <p class="text-start">Our platform empowers athletes to set short and long-term goals, charting the path to the Olympics or exploring alternative sports industry careers.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3: Performance Analytics -->
+                        <div class="w-1/3 p-4">
+                            <img class="object-cover h-64 w-full mb-4 rounded-lg overflow-hidden shadow-lg" src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1000/height:1000/https://goceppro.com/wp-content/uploads/2020/09/AR1.jpeg" alt="Performance Analytics" style="height:250px; width: 100%;">
+                            <div class="p-2 bg-purple-800">
+                                <h3 class="text-start text-xl mb-2">Performance Analytics</h3>
+                                <p class="text-start">We harness data and cutting-edge machine learning to uncover insights that empower coaches to tailor training, adjust strategies, and optimize recovery for each athlete.</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+     </div>
+
+     
+     <!-- data driven -->
+     <div class="relative card-bg text-white fade-in">
+        <div class="container mx-auto justify-center py-10 p-10 items-center">
+            <div class="card rounded-sm relative ">
+                <div class="p-10 justify-center align-middle  bg-opacity-80 backdrop-opacity-50" style="background-image: url('../images/backgrounds/bg1.avif'); background-size: cover; object-fit: cover;">
+                    <h2 class="card-title text-6xl text-center mb-8">Data-Driven Performance</h2>
+                    <p class="text-left text-lg mb-8">Elev8's comprehensive analytics system harnesses AI to provide deep insights into athlete performance. We collect data from wearables, on-field sensors, and tests, then use sophisticated algorithms to identify patterns, predict outcomes, and generate actionable insights for coaches and athletes.</p>
+                    
+                    <!-- Table Design -->
+                    <div class="shadow-md bg-transparent bg-opacity-20 p-2 ">
+                        <table class="hover:table-fixed  w-full text-left rounded-lg text-white border-separate border border-slate-400 border-spacing-4 border-r-2"
+                        style="border-radius: 50%;">
+                            <thead>
+                                <tr style="width:2.8rem">
+                                    <th class="bg-transparent underline border border-slate-300 font-bold text-xl border-1">Data Source</th>
+                                    <th class="underline border border-slate-300 font-bold border-1 text-xl">Insights</th>
+                                    <th class="underline border border-slate-300 font-bold border-1 text-xl">Benefits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-600">
+                                    <td class="text-lg border border-slate-300">Wearables</td>
+                                    <td class="text-lg border border-slate-300">Heart rate, movement, sleep</td>
+                                    <td class="text-lg border border-slate-300">Optimize training and recovery</td>
+                                </tr>
+                                <tr class="border-b border-gray-600">
+                                    <td class="text-lg border border-slate-300">On-Field Sensors</td>
+                                    <td class="text-lg border border-slate-300">Speed, acceleration, positioning</td>
+                                    <td class="text-lg border border-slate-300">Improve tactics and performance</td>
+                                </tr>
+                                <tr class="border-b border-gray-600">
+                                    <td class="text-lg border border-slate-300">Performance Tests</td>
+                                    <td class="text-lg border border-slate-300">Strength, flexibility, skills</td>
+                                    <td class="text-lg border border-slate-300">Track progress and identify areas for improvement</td>
+                                </tr>
+                                <tr class="border-b border-gray-600">
+                                    <td class="text-lg border border-slate-300">Video Analysis</td>
+                                    <td class="text-lg border border-slate-300">Technique, strategy, opponents</td>
+                                    <td class="text-lg border border-slate-300">Enhance skill and game planning</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     
     
      
